@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infinite Fantasia</title>
+<meta name="description" content="A story-driven tactical roguelite about building your own class by fusing small fantasy jobs. Play the prototype in your browser.">
+<style>
+  @font-face {
+    font-family: "NeoDunggeunmo";
+    src: url("fonts/NeoDunggeunmoPro-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+  :root {
+    --ink: #452b1a;
+    --muted-ink: #735943;
+    --cream: #f7ebd1;
+    --parchment: #f1e2bf;
+    --parchment-edge: #b8925c;
+    --night: #1b1820;
+    --night-panel: #2a2230;
+    --red: #8c2a1f;
+    --red-light: #b33a2c;
+    --gold: #e0b354;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--night); }
+  body {
+    margin: 0;
+    background: var(--night);
+    color: var(--cream);
+    font-family: "NeoDunggeunmo", "Courier New", monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--gold); }
+  img { image-rendering: pixelated; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero {
+    background: linear-gradient(rgba(27, 24, 32, 0.55), rgba(27, 24, 32, 0.92)), url("screens/town.png") center / cover no-repeat;
+    image-rendering: pixelated;
+    padding: 72px 0 56px;
+    text-align: center;
+    border-bottom: 4px solid var(--parchment-edge);
+  }
+  h1 { font-size: clamp(36px, 7vw, 64px); margin: 0; letter-spacing: 2px; font-weight: normal; }
+  .tagline { font-size: clamp(18px, 2.6vw, 22px); max-width: 640px; margin: 12px auto 28px; }
+  .play {
+    display: inline-block;
+    background: var(--red);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 12px 32px;
+    border: 3px solid var(--gold);
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  .play:hover, .play:focus-visible { background: var(--red-light); }
+  .note { font-size: 15px; color: #cbbfa6; margin-top: 12px; }
+
+  section { padding: 44px 0 8px; }
+  h2 { font-size: 26px; font-weight: normal; margin: 0 0 16px; color: var(--gold); letter-spacing: 1px; }
+  .card {
+    background: var(--parchment);
+    color: var(--ink);
+    border: 3px solid var(--parchment-edge);
+    padding: 20px 24px;
+  }
+  .card p { margin: 0 0 12px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { margin: 0; padding-left: 20px; }
+  .card li { margin-bottom: 6px; }
+  .muted { color: var(--muted-ink); }
+
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .gallery figure { margin: 0; background: var(--night-panel); border: 3px solid var(--parchment-edge); }
+  .gallery img { display: block; width: 100%; height: auto; }
+  .gallery figcaption { padding: 6px 10px; font-size: 15px; }
+
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  kbd {
+    font-family: inherit;
+    background: var(--cream);
+    border: 2px solid var(--parchment-edge);
+    padding: 0 6px;
+    color: var(--ink);
+  }
+  footer { padding: 44px 0 56px; font-size: 15px; color: #cbbfa6; }
+  footer p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>INFINITE FANTASIA</h1>
+    <p class="tagline">A story-driven tactical roguelite where you build a new class each run by fusing small fantasy jobs.</p>
+    <a class="play" href="play/">PLAY THE PROTOTYPE</a>
+    <p class="note">Runs in your browser on a computer, with a mouse and keyboard. An early prototype: expect rough edges.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>THE IDEA</h2>
+    <div class="card">
+      <p>Start as a Warrior, Mage, Thief, Cleric, Archer or Barbarian. At the end of each act, fuse in a second class, then a third. A Warrior who takes up magic becomes a Battlemage; add a Cleric and you're a Lightbringer. Every mix is its own named class with its own rules, and changing one ingredient makes something new.</p>
+      <p>Each run is a short campaign across three acts through a world that's rolled fresh every time: towns, wilderness roads and dungeons in their own biomes, some packed with things to find and some nearly empty. Recruit companions, find pets, and face a boss at the end of every act.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>SCREENS</h2>
+    <div class="gallery">
+      <figure><img src="screens/creator.png" alt="The character creator: body, skin, face, eyes, hair and facial hair" loading="lazy" width="1920" height="1080"><figcaption>Make your hero</figcaption></figure>
+      <figure><img src="screens/route.png" alt="Route cards: a wilderness and a dungeon to choose between" loading="lazy" width="1920" height="1080"><figcaption>Pick the road ahead</figcaption></figure>
+      <figure><img src="screens/town.png" alt="A busy market town full of townsfolk with something to say" loading="lazy" width="1920" height="1080"><figcaption>Every place rolls how busy it is</figcaption></figure>
+      <figure><img src="screens/wilderness.png" alt="A wilderness road with a camp, a monster and a strange tree" loading="lazy" width="1920" height="1080"><figcaption>Explore the wilderness</figcaption></figure>
+      <figure><img src="screens/dungeon.png" alt="A dungeon room with a mini-boss and a chest" loading="lazy" width="1920" height="1080"><figcaption>Delve three rooms deep</figcaption></figure>
+      <figure><img src="screens/battle.png" alt="The hero, a companion and a Phoenix pet fighting the Bog Queen" loading="lazy" width="1920" height="1080"><figcaption>Fight as a party of four</figcaption></figure>
+      <figure><img src="screens/stable.png" alt="The Stable, showing a Legendary Phoenix and its powers" loading="lazy" width="1920" height="1080"><figcaption>Collect forty pets</figcaption></figure>
+      <figure><img src="screens/fusion.png" alt="The fusion screen, choosing a second class" loading="lazy" width="1920" height="1080"><figcaption>Fuse a new class</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div>
+        <h2>IN THIS PROTOTYPE</h2>
+        <div class="card">
+          <ul>
+            <li>Six starting classes and every two- and three-class fusion</li>
+            <li>Three acts, each ending at a boss: the Bog Queen, the Gloom Lord and the Hollow King</li>
+            <li>A character creator: make your hero, then find new outfits on your runs</li>
+            <li>Dozens of events, from lost kittens to a prince's campaign, and some only your classes notice</li>
+            <li>Biomes, barren stretches that pay off if you survive them, rare regions and great cities</li>
+            <li>Skill checks thrown with a real 3D d20</li>
+            <li>Forty pets in five rarities: found on the road, or hatched from raptor eggs</li>
+            <li>Gear in five rarities, including two Legendaries (one is a sword named Fred)</li>
+            <li>Companions with their own backstories, and a Class Book that remembers every class you've made</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>HOW TO PLAY</h2>
+        <div class="card">
+          <p>Click everything. In battle, pick a move for each party member, then a target. <kbd>1</kbd>–<kbd>4</kbd> use moves, <kbd>5</kbd> your Ultimate, <kbd>P</kbd> your pet, <kbd>Tab</kbd> picks the next target, <kbd>A</kbd> hands your companions to Auto, and <kbd>Space</kbd> continues.</p>
+          <p>Make an account to keep your progress online and play on any computer, or play as a guest and it saves in this browser after every run. To start over, open <b>Options</b> on the main menu and choose <b>Restart Account</b>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Design and direction: Uatthescool.</p>
+    <p>Original art by Chifucentralaok with Uatthescool: the class coins and guild monument, the Swordfish, and fishing.</p>
+    <p>Art: Time Fantasy tilesets, battlers, monsters, characters and faces, and Time Elements character parts, by <a href="https://timefantasy.net">finalbossblues</a>; monster recolors by Uatthescool. Pixel RPG Dialogue UI by IndigoLay. Sound: Casino Audio, Interface Sounds and Music Jingles by <a href="https://kenney.nl">Kenney</a> (CC0).</p>
+    <p>Fonts: monogram by <a href="https://datagoblin.itch.io/monogram">datagoblin</a> (CC0); NeoDunggeunmo Pro by Eunbin Jeong (Dalgona), under the <a href="fonts/OFL.txt">SIL Open Font License 1.1</a>.</p>
+    <p>Made with <a href="https://godotengine.org">Godot Engine</a>, under the MIT license.</p>
+    <p><a href="privacy.html">Privacy policy</a></p>
+  </div>
+</footer>
+</body>
+</html>
